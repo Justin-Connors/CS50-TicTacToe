@@ -153,6 +153,7 @@ def minimax(board):
     # If the current player is X
     if current_player == X:
         v = -math.inf
+        # Initialize best action to None to assign it later
         best_action = None
         for action in actions(board):
             min_val = min_value(result(board, action))
@@ -164,6 +165,7 @@ def minimax(board):
     # If the current player is O
     else:
         v = math.inf
+        # Initialize best action to None to assign it later
         best_action = None
         for action in actions(board):
             max_val = max_value(result(board, action))
